@@ -64,6 +64,10 @@ int Solution::lengthOf(string s)
        - but the window might have moved
          already if there are repeating
          chars between s[lastIndex]..s[j]
+         - meaning the start of the window
+           has moved past lastIndx[s[j]] + 1
+           and lastIndx[s[j]] + 1 become
+           stale
        - use max to find the right start
     */
     start = max(start, lastIndx[s[j]] + 1);
